@@ -1,0 +1,151 @@
+/* ------------------------------------------------------------------------ */
+
+/* ⬇︎ Googleフォントを必要なものだけ読み込みます（英字と日本語でフォントを変えたい場合は２種類） */
+
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital@1&family=Zen+Kaku+Gothic+New:wght@700&display=swap');
+
+/* ------------------------------------------------------------------------ */
+
+/* ⬇︎ bodyタグ(webページ全体のデザイン) のスタイル */
+
+body {
+    /* bodyタグにはデフォルトで8pxの余白があるので余白を消します */
+    margin: 0;
+    /* webページ全体のフォント色を指定します（別のスタイルでフォント色を設定しなければ統一されます） */
+    color: #000000;
+    /* デフォルトは12pxなので少し大きくします */
+    font-size: 16px;
+    /* フォントの太さを太くすると元気な雰囲気になります */
+    font-weight: 700;
+    /* Googleフォントで読み込んだフォントをひとつ目に指定します。（英字向けフォント1番目、日本語フォント２番目で設定します） */
+    font-family: 'MuseoModerno', 'Zen Kaku Gothic New', sans-serif;
+}
+
+/* ------------------------------------------------------------------------ */
+
+/* 柔軟に並べる(flex)機能を活かしたエリアの設定。記事を横並びにまとめる設定にします */
+
+.wrapper {
+    /* displayの設定値を「flex」にすると、内部の記事の並び方が設定できるようになります */
+    display: flex;
+    /* [flexの詳細設定] 画面が狭い時に内部の記事を折り返させます */
+    flex-wrap: wrap;
+    /* [flexの詳細設定] 内部の記事を並べる向きを設定します。rowはヨコ並び */
+    flex-direction: row;
+}
+
+/* ------------------------------------------------------------------------ */
+
+/* ⬇︎ flexエリア内の要素の共通設定 */
+
+.corner {
+    /* 記事の内側に余白をつけます。bottomなので下側のみ */
+    padding-bottom: 40px;
+    /* 記事のさらに内部の要素も「flex」で扱えるようにします */
+    display: flex;
+    /* [flexの詳細設定] 画面サイズが変わる時の記事が伸びる設定です */
+    /* ( 個別に数字を変えると優先順位がつきますが、今回は全て１にします ) */
+    flex-grow: 1;
+    /* [flexの詳細設定] 内部の記事を並べる向きを設定します。columnはタテ並び */
+    flex-direction: column;
+    /* [flexの詳細設定] 内部の要素のタテ向き配置を設定します。このcenterはタテ中央 */
+    justify-content: center;
+    /* [flexの詳細設定] 内部の要素のヨコ向き配置を設定します。このcenterはヨコ中央 */
+    align-items: center;
+}
+
+/* ------------------------------------------------------------------------ */
+
+/* ⬇︎ 記事の個別設定クラス */
+
+.box1 {
+    /* [flexの詳細設定] 基本のヨコ幅。共通設定でflex-growを１にしているので画面サイズによっては伸び縮みします */
+    flex-basis: 400px;
+    /* [背景の詳細設定] 背景に使う画像を設定します */
+    background-image: url(./images/img_book_store_1.jpg);
+    /* [背景の詳細設定] 背景画像を表示エリアのサイズに合わせた設定にします。coverは長い辺に合わせて拡大縮小する */
+    background-size: cover;
+}
+
+.box2 {
+    flex-basis: 400px;
+    /* [背景の詳細設定] 背景に使う色を設定します */
+    background-color: #ece1e1;
+}
+
+.box3 {
+    flex-basis: 400px;
+    background-color: #5fddd4;
+    background-image: url(./images/img_book_store_3.jpg);
+    /* [背景の詳細設定] 背景画像を表示エリアのサイズに合わせた設定にします。containは短い辺に合わせて拡大縮小する */
+    background-size: contain;
+    /* [背景の詳細設定] 背景画像の繰り返しについて設定にします。no-repeatは繰り返さないので背景画像でおおいきれないエリアが背景色で表現されます */
+    background-repeat: no-repeat;
+}
+
+.box4 {
+    flex-basis: 300px;
+    /* [背景の詳細設定] 背景に使う画像をグラデーションに差し替えて設定します */
+    /* （degはグラデーション角度です。角度を設定すると斜めのグラデーションになります） */
+    background-image: linear-gradient(0deg, #ecff86, #ffef0b);
+}
+
+.box5 {
+    flex-basis: 500px;
+    background-image: linear-gradient(0deg, #70cfff, #30f0db);
+}
+
+/* ------------------------------------------------------------------------ */
+
+/* ⬇︎ 細かいパーツの個別設定クラス */
+
+.inner {
+    /* 内部の要素の寄せる向きを指定します。centerは中央寄せです。flexの時はalign-items: center;を使います */
+    text-align: center;
+    /* 要素の「内側」に余白をつけます。bottomなど位置指定がない場合は４辺共通で余白をとります */
+    padding: 80px;
+}
+
+.speech {
+    /* displayをinline-blockにすると内側のサイズにあわせたサイズになります。blockだと外側のサイズに合わせます */
+    display: inline-block;
+    /* 要素の「外側」に余白をつけます。bottomなど位置指定がない場合は４辺共通で余白をとります */
+    margin: 16px;
+    padding: 24px;
+    text-align: left;
+    background-color: #fff;
+    /* 要素の４つの角を角丸にします。半径サイズを指定するので大きい数字にするほど角丸が広くなります */
+    border-radius: 12px;
+}
+
+.highlight {
+    /* 文字と文字の間の余白を設定します */
+    letter-spacing: 8px;
+    /* 要素の「外側」に余白をつけます。padding-leftだと左側にだけ余白をつけます */
+    padding-left: 8px;
+    color: #FFFFFF;
+    /* spanタグのようなインライン要素に背景をつけるとテキストのみに背景をつけることができます */
+    background-color: #000000;
+}
+
+/* ------------------------------------------------------------------------ */
+
+/* 営業時間を表示するTableタグの個別設定クラス */
+
+.info {
+    /* Tableのセルとセルの間の余白をつけない設定 */
+    /* （セルに枠線を付けたとき隣同士に隙間ができないようにできる） */
+    border-collapse: collapse;
+    margin-bottom: 40px;
+}
+
+/* 異なるタグをカンマ区切りで並べることで、共通スタイルを設定します */
+
+.info th, .info td {
+    /* padding や margin の設定値を２つ書くと、「上下」「左右」２種類の余白を設定できます */
+    padding: 10px 20px;
+    text-align: center;
+    /* borderは枠線の設定です。border-bottomでは下線の設定をします */
+    /* 設定値を３つ書くと、「線の太さ」「線のタイプ(solidは直線)」「線の色」を設定できます */
+    border-bottom: 2px solid #ffffff;
+}

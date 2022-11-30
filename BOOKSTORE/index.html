@@ -1,0 +1,143 @@
+<!-- ⬇︎【 ! と Tabキー 】で HTMLの基本構造を自動入力できます -->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- ⬇︎ここから head ブラウザ上では「見えない部分」、影で支える重要事項を設定します -->
+<!-- 今回は title と link のみ手動で設定します -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ⬇︎ ページタイトル ブラウザのタブに表示されます -->
+    <title>みんなの本屋『 BOOK STORE POP 』</title>
+    <!-- ⬇︎ CSSのファイル ( main.css ) で用意したスタイルを使えるようにします -->
+    <link href="./main.css" rel="stylesheet">
+</head>
+<!-- ここまで head -->
+<!-- ⬇︎ここから body ブラウザ上で「目に見える部分」の基本構造を記述します -->
+
+<body>
+    <!-- ⬇︎ここから wrapper flexスタイルを活かし、記事の並びを画面サイズに合わせます -->
+    <div class="wrapper">
+        <!-- ⬇︎ここから corner 記事ごとに個別のスタイルをつけカラフルにする -->
+        <!-- box1 -->
+        <div class="corner box1">
+            <!-- スタイルシートを参照せず、divタグに直接スタイルを書いてみる -->
+            <div class="inner" style="background: linear-gradient(-45deg, #d7f1ffc2, #b7e3e4e0);">
+                <!-- <h＋数字>は見出しタグ。<h1> が最重要の見出しと定義されているので、デフォルトで文字サイズが大きい -->
+                <h1>BOOK STORE POP !</h1>
+                <h3>Something amazing happened..!</h3>
+                <p>読みたい本がきっとある。</p>
+            </div>
+        </div>
+        <!-- box2 -->
+        <div class="corner box2">
+            <!-- imgタグ。背景画像ではなくひとつの要素として、テキストより上に画像を表示する。 -->
+            <img src="./images/img_book_store_2.jpg" alt="BOOK STORE POPの店内" style="width:100%">
+            <div class="inner">
+                <h3>Wonder into...</h3>
+                <p>『 BOOK STORE POP 』のスペシャルアイテムを忍ばせて、ドキドキワクワクの毎日をすごしてく！
+                    <small>グッズエリアは店内奥にて、ゆったりとお楽しみいただけます。</small></p>
+            </div>
+        </div>
+        <!-- box3 -->
+        <div class="corner box3">
+            <div class="inner">
+                <!-- <span>タグで囲った部分はインライン要素（ひとまとまりの文字単位）になるので -->
+                <!-- スタイルで背景色を設定すると文字の後ろにラインを引いた表現ができる -->
+                <h3><span class="highlight">Recommend</span></h3>
+                <p><span class="highlight">今月のおすすめ</span></p>
+                <p class="speech">黒い喜劇 -『友達』／ 安部公房<br><br>
+                    奇妙な9人家族が青年のアパートにやってきた。笑顔で隣人愛をとなえ続ける侵入者たちに困惑する青年の日常がねじれ始める。<br><br>果たして青年の運命は・・・？
+                </p>
+            </div>
+        </div>
+        <!-- box4 -->
+        <div class="corner box4">
+            <div class="inner">
+                <h3><span class="highlight">Event</span></h3>
+                <p><span class="highlight">今月のイベント</span></p>
+                <!-- speech -->
+                <p class="speech">『 ビブリオバトル ４月大会 』<br>
+                    <small>20XX年04月20日</small><br>
+                    今月も開催します！手に汗握る書評合戦を刮目せよ！
+                </p>
+                <p class="speech">『 絶版本 立ち読み会 』<br><
+                    small>20XX年04月30日</small><br>
+                    有志持ち寄りによる立ち読み会やります。あの装丁に出会える最大のチャンスかも！
+                </p>
+            </div>
+        </div>
+        <!-- box5 -->
+        <div class="corner box5">
+            <div class="inner">
+                <h3>Infomation</h3>
+                <!-- tableタグを使ってスプレッドシートのように表示する -->
+                <table class="info">
+                    <tr> <!-- <tr>で１行の内容をまとめます -->
+                        <th>営業時間</th> <!-- <th>は列の頭のことです。 -->
+                        <th>月</th>
+                        <th>火</th>
+                        <th>水</th>
+                        <th>木</th>
+                        <th>金</th>
+                        <!-- 土曜日・日曜日はわかりやすい色にしたいのでスタイルを呼び出します -->
+                        <th style="color: #2e57cc;">土</th>
+                        <th style="color: #e66a6a;">日</th>
+                    </tr>
+                    <tr>
+                        <td>10:00〜16:00</td>
+                        <td>●</td>
+                        <!-- 月 -->
+                        <td>●</td>
+                        <!-- 火 -->
+                        <td>●</td>
+                        <!-- 水 -->
+                        <td>ー</td>
+                        <!-- 木 -->
+                        <td>●</td>
+                        <!-- 金 -->
+                        <td>●</td>
+                        <!-- 土 -->
+                        <td>●</td>
+                        <!-- 日 -->
+
+                    </tr>
+                    <tr>
+                        <td>18:00〜21:00</td>
+                        <td>●</td>
+                        <!-- 月 -->
+                        <td>●</td>
+                        <!-- 火 -->
+                        <td>●</td>
+                        <!-- 水 -->
+                        <td>ー</td>
+                        <!-- 木 -->
+                        <td>●</td>
+                        <!-- 金 -->
+                        <td>●</td>
+                        <!-- 土 -->
+                        <td>ー</td>
+                        <!-- 日 -->
+                    </tr>
+                </table>
+                <div class="style3">
+                    <p class="speech">〒XXX-XXXX<br>
+                        動物市 ライオン町 1番 1号<br>
+                        TEL 000 - 000 - 0000<br><br>
+                        - BOOK STORE POP -<br>
+                        <!-- <a>タグはリンクを設定します。 -->
+                        <!-- リンクをクリックすると新しくタブを開き(target="_blank")、地図画像を表示するようにします -->
+                        <a href="./images/img_map.png" target="_blank">▶︎ 近隣の地図</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- ここまで　box5 -->
+    </div>
+    <!-- ここまで wrapper -->
+</body>
+<!-- ここまで body -->
+
+</html>

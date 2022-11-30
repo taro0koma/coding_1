@@ -1,0 +1,100 @@
+<!-- ⬇︎【 ! と Tabキー 】で HTMLの基本構造を自動入力できます -->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- ⬇︎ここから head ブラウザ上では「見えない部分」、影で支える重要事項を設定します -->
+<!-- 今回は title と link のみ手動で設定します -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ⬇︎ ページタイトル ブラウザのタブに表示されます -->
+  <title>ゆったりひととき『 CAFE WHITE 』</title>
+  <!-- ⬇︎ CSSのファイル ( main.css ) で用意したスタイルを使えるようにします -->
+  <link href="./main.css" rel="stylesheet">
+</head>
+<!-- ここまで head -->
+<!-- ⬇︎ここから body ブラウザ上で「目に見える部分」の基本構造を記述します -->
+
+<body>
+  <div class="wrapper">
+    <div class="outer">
+      <div class="box">
+        <h1>CAFE WHITE</h1>
+        <hr>
+      </div>
+      <div class="box">
+          <img src="./images/img_coffee_shop_1.jpg" style="width:80%;" alt="CAFE WHITE の店内">
+      </div>
+      <div class="box">
+        <h2>白い空間にて、ひとときの癒しを。</h2>
+        <p>やわらかい自然光が差し込むゆとりある開放的なカフェにて、<br>コーヒーの深い芳香がお客さまをお迎えいたします。</p>
+      </div>
+      <div class="box flex-area">
+        <div>
+          <h3>Recommend</h3>
+          <h4>季節のおすすめ</h4>
+          <ul>
+            <li><strong>シェカラート</strong> 甘口に泡立てた優しい口当たりの飲みやすいエスプレッソです。
+            <li><strong>エスプレッソトニック</strong> 甘めのハーブ炭酸水で割る癖になる新感覚フレーバー。
+          </ul>
+        </div>
+        <div>
+          <h3>Event</h3>
+          <h4>初夏のワクワクイベント</h4>
+          <ul>
+            <li><strong>SPECIALステージ</strong> CAFE WHITE ファミリーバンドでスウィングな夕暮れをお過ごしください！
+            <li><strong>産直素材deディナーDay</strong> モグラ市提携農場の採れたて野菜が主役！ 鮮度一番の味わいをお届けします。
+          </ul>
+        </div>
+      </div>
+      <div class="box">
+        <h3>Infomation</h3>
+        <table class="info">
+          <tbody>
+            <tr>
+              <th>営業時間</th>
+              <th>月</th>
+              <th>火</th>
+              <th>水</th>
+              <th>木</th>
+              <th>金</th>
+              <th style="color: #3db2da;">土</th>
+              <th style="color: #e66a6a;">日</th>
+            </tr>
+            <tr>
+              <td>10:00〜16:00</td>
+              <td>●</td><!-- 月 -->
+              <td>●</td><!-- 火 -->
+              <td>●</td><!-- 水 -->
+              <td>ー</td><!-- 木 -->
+              <td>●</td><!-- 金 -->
+              <td>●</td><!-- 土 -->
+              <td>●</td><!-- 日 -->
+
+            </tr>
+            <tr>
+              <td>18:00〜21:00</td>
+              <td>●</td><!-- 月 -->
+              <td>●</td><!-- 火 -->
+              <td>●</td><!-- 水 -->
+              <td>ー</td><!-- 木 -->
+              <td>●</td><!-- 金 -->
+              <td>●</td><!-- 土 -->
+              <td>ー</td><!-- 日 -->
+            </tr>
+          </tbody>
+        </table>
+        <div class="box">
+          <p>〒XXX-XXXX<br>動物市 ライオン町 1番 1号<br>TEL 000 - 000 - 0000</p>
+          <p>
+            <strong>CAFE WHITE</strong><br>
+            <a href="./images/img_map.png" target="_blank">MAP</a>
+          </p>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>
